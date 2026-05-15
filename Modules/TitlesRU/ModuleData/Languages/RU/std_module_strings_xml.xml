@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="Русский" />
+  </tags>
+  <strings>
+    <!-- MCM Groups -->
+    <string id="titles_group_core" text="Основные настройки" />
+    <string id="titles_group_map" text="Карта и значки" />
+    <string id="titles_group_ranks" text="Ранги титулов" />
+    <string id="titles_group_family" text="Семейные титулы" />
+    <string id="titles_group_other" text="Прочие титулы" />
+    <string id="titles_group_player" text="Параметры игрока" />
+    <string id="titles_group_encyclopedia" text="Энциклопедия" />
+    <string id="titles_group_misc" text="Разное" />
+    <string id="titles_group_notifications" text="Уведомления" />
+    <string id="titles_group_advanced" text="Дополнительно" />
+    <string id="titles_group_debug" text="Отладка" />
+    <string id="titles_enable" text="Включить систему титулов" />
+    <string id="titles_enable_hint" text="Главный переключатель всей системы титулов." />
+    <string id="titles_display_mode" text="Режим отображения" />
+    <string id="titles_display_mode_hint" text="Минимальный: титулы на карте и в нескольких других местах (рекомендуется) | Полная интеграция: титулы везде, где отображается имя персонажа" />
+    <string id="titles_preset" text="Набор титулов" />
+    <string id="titles_preset_hint" text="TitlesOriginal: стандартная конфигурация титулов | Historical: достоверные исторические титулы | Custom: редактируйте XML-файлы в Modules/Titles/TitleConfigs/" />
+    <string id="titles_show_title_icons" text="Показывать значки титулов" />
+    <string id="titles_show_title_icons_hint" text="Показывать значки титулов на табличках имён на карте в обоих режимах отображения. Значки по умолчанию: ♔ король, ♕ королева, ⚜ герцог, ⚚ граф, ♖ барон" />
+    <string id="titles_show_title_text" text="Показывать текст титула" />
+    <string id="titles_show_title_text_hint" text="Показывать текст титула (король, герцог и т. д.) на табличках имён на карте. Применяется только к минимальному режиму отображения." />
+    <string id="titles_show_ruler" text="Показывать королевские титулы" />
+    <string id="titles_show_ruler_hint" text="Показывать титулы королей и королев (правителей фракций)." />
+    <string id="titles_show_duke" text="Показывать титулы герцогов" />
+    <string id="titles_show_duke_hint" text="Показывать титулы знати герцогского ранга (владеют и городами, и замками). Если отключено, герцоги получают титул 'лорд/леди', если включены титулы лидеров кланов без феодов. Энциклопедия всегда показывает настоящие герцогские титулы." />
+    <string id="titles_show_duke_icons" text="Показывать значки герцогов" />
+    <string id="titles_show_duke_icons_hint" text="Показывать значки для знати герцогского ранга. Значок по умолчанию: ⚜" />
+    <string id="titles_show_count" text="Показывать титулы графов" />
+    <string id="titles_show_count_hint" text="Показывать титулы знати графского ранга (владеют 1+ городами, но не замками). Если отключено, графы получают титул 'лорд/леди', если включены титулы лидеров кланов без феодов. Энциклопедия всегда показывает настоящие графские титулы." />
+    <string id="titles_show_count_icons" text="Показывать значки графов" />
+    <string id="titles_show_count_icons_hint" text="Показывать значки для знати графского ранга. Значок по умолчанию: ⚚" />
+    <string id="titles_show_baron" text="Показывать титулы баронов" />
+    <string id="titles_show_baron_hint" text="Показывать титулы знати баронского ранга (владеют 1+ замками, но не городами). Если отключено, бароны получают титул 'лорд/леди', если включены титулы лидеров кланов без феодов. Энциклопедия всегда показывает настоящие баронские титулы." />
+    <string id="titles_show_baron_icons" text="Показывать значки баронов" />
+    <string id="titles_show_baron_icons_hint" text="Показывать значки для знати баронского ранга. Значок по умолчанию: ♖" />
+    <string id="titles_show_spouse" text="Показывать титулы супругов" />
+    <string id="titles_show_spouse_hint" text="Супруги вассальной знати (герцогов/графов/баронов) получают соответствующие титулы (например, жена герцога становится герцогиней, жена барона — баронессой). Не влияет на супругов правителей (см. 'Показывать титулы супругов правителей')." />
+    <string id="titles_show_ruler_spouse" text="Показывать титулы супругов правителей" />
+    <string id="titles_show_ruler_spouse_hint" text="Супруги правителей фракций (королей/королев) получают соответствующие титулы (например, жена короля становится королевой). Это отдельная настройка от 'Показывать титулы супругов', которая управляет супругами вассалов." />
+    <string id="titles_show_spouse_icons" text="Показывать значки супругов" />
+    <string id="titles_show_spouse_icons_hint" text="Показывать значки титулов для супругов. Примеры: жена короля — ♕, жена герцога — ⚜, жена графа — ⚚, жена барона — ♖." />
+    <string id="titles_show_heir" text="Показывать титулы наследников" />
+    <string id="titles_show_heir_hint" text="Дети правителей (королей/королев) получают титулы наследников (например, принц, принцесса и т. д.)." />
+    <string id="titles_show_heir_icons" text="Показывать значки наследников" />
+    <string id="titles_show_heir_icons_hint" text="Показывать значки титулов для наследников. Значок по умолчанию: ✧" />
+    <string id="titles_use_consort" text="Использовать титулы консортов" />
+    <string id="titles_use_consort_hint" text="Показывать титулы консортов для супругов правителей (например, 'королева-консорт' для жены короля). Применяется только к титулам с дополнительной строкой консорта в файле набора." />
+    <string id="titles_use_fiefless" text="Использовать титулы лидеров кланов без феодов" />
+    <string id="titles_use_fiefless_hint" text="Показывать титулы лорда/леди для лидеров кланов без феодов. Также служит запасным вариантом, когда титулы барона/графа/герцога отключены в MCM. Отображается только в диалогах и на табличках имён на карте." />
+    <string id="titles_use_nonleader" text="Использовать титулы знати не-лидеров" />
+    <string id="titles_use_nonleader_hint" text="Показывать титулы лорда/леди для знати, не являющейся лидерами (членов клана, которые не являются лидерами клана, супругами или наследниками). Отображается только в диалогах и на табличках имён на карте." />
+    <string id="titles_use_mercenary" text="Использовать титулы наёмников" />
+    <string id="titles_use_mercenary_hint" text="Показывать титулы для кланов наёмников. Лидеры получают титул 'капитан-генерал', члены — 'сержант'." />
+    <string id="titles_use_mercenary_icons" text="Использовать значки наёмников" />
+    <string id="titles_use_mercenary_icons_hint" text="Показывать значок для лидеров наёмников. Значок по умолчанию: ⚔" />
+    <string id="titles_show_factionless_player" text="Показывать титулы игрока без фракции" />
+    <string id="titles_show_factionless_player_hint" text="Показывать титулы, когда вы не состоите ни в одном королевстве (например, 'барон' при владении первым замком)." />
+    <string id="titles_use_custom_factionless" text="Использовать особые титулы игрока без фракции" />
+    <string id="titles_use_custom_factionless_hint" text="Использовать особые титулы, когда вы не состоите ни в одном королевстве. Настройка в TitleConfig_FactionlessPlayer.xml." />
+    <string id="titles_use_player_kingdom" text="Использовать особые титулы королевства игрока" />
+    <string id="titles_use_player_kingdom_hint" text="Использовать особые титулы для ВАШЕГО королевства, созданного игроком (не для королевств NPC). Настройка в TitleConfig_PlayerKingdom.xml." />
+    <string id="titles_enable_encyclopedia" text="Включить изменения энциклопедии" />
+    <string id="titles_enable_encyclopedia_hint" text="Главный переключатель всех изменений энциклопедии." />
+    <string id="titles_show_titles_section" text="Показывать раздел титулов" />
+    <string id="titles_show_titles_section_hint" text="Показывать отдельный раздел 'Титулы' на страницах героев в энциклопедии со списком всех титулов и связанных феодов (например, 'герцог Саргота')." />
+    <string id="titles_show_icons_encyclopedia" text="Показывать значки в разделе титулов" />
+    <string id="titles_show_icons_encyclopedia_hint" text="Показывать значки титулов (♔, ⚜ и т. д.) в разделе титулов энциклопедии. Значки никогда не появляются в области имени/подзаголовка в левом верхнем углу." />
+    <string id="titles_show_kingdom_hierarchy" text="Показывать раздел иерархии королевства" />
+    <string id="titles_show_kingdom_hierarchy_hint" text="Показывать раздел 'Иерархия титулов' на страницах королевств в энциклопедии, где знать упорядочена по рангу." />
+    <string id="titles_additional_locations" text="Дополнительные места отображения титулов" />
+    <string id="titles_additional_locations_hint" text="Показывать титулы в дополнительных экранах интерфейса: экран пленников, развёртывание перед боем и меню 'поговорить с кем-нибудь'. Применяется только к минимальному режиму." />
+    <string id="titles_show_liege_tooltip" text="Показывать сюзерена в подсказках" />
+    <string id="titles_show_liege_tooltip_hint" text="Показывать, кому служит каждый лорд, в подсказках отрядов и героев (например, 'Сюзерен: ♔ король Дертерт')." />
+    <string id="titles_show_icons_tooltip" text="Показывать значки в подсказках" />
+    <string id="titles_show_icons_tooltip_hint" text="Показывать значки титулов (♔, ⚜ и т. д.) в полях подсказок 'сюзерен/лидер/нанят'." />
+    <string id="titles_simp_mode" text="Включить режим поклонника" />
+    <string id="titles_simp_mode_hint" text="Даёт самому почитаемому правителю Кальрадии уникальный титул, описание в энциклопедии и новые варианты диалога. Чисто косметическая функция — попробуйте." />
+    <string id="titles_encyclopedia_timeline" text="Изменения титулов в хронике энциклопедии" />
+    <string id="titles_encyclopedia_timeline_hint" text="Добавлять изменения титулов в хронику героя в энциклопедии (видно на страницах героев)." />
+    <string id="titles_notify_player_kingdom" text="Показывать изменения титулов королевства игрока" />
+    <string id="titles_notify_player_kingdom_hint" text="Показывать уведомления, когда вы или члены вашего королевства получаете или теряете титулы." />
+    <string id="titles_notify_all_kingdoms" text="Показывать изменения титулов всех королевств" />
+    <string id="titles_notify_all_kingdoms_hint" text="Показывать уведомления об изменениях титулов во всех королевствах (может быть навязчиво)." />
+    <string id="titles_refresh_presets" text="Обновить список наборов" />
+    <string id="titles_refresh_presets_hint" text="Перезагрузить список доступных наборов титулов. Используйте, если вы добавили новые файлы наборов во время работы игры." />
+    <string id="titles_refresh_presets_content" text="Обновить" />
+    <string id="titles_debug" text="Включить журнал отладки" />
+    <string id="titles_debug_hint" text="Включить подробную запись в файл журнала для отладки." />
+    <string id="titles_show_debug_messages" text="Показывать отладочные сообщения" />
+    <string id="titles_show_debug_messages_hint" text="Показывать отладочные сообщения в игре (требуется включить журнал отладки)." />
+    <string id="titles_section_header" text="Титулы" />
+    <string id="titles_hierarchy" text="Иерархия" />
+    <string id="titles_other_nobles" text="Прочая знать" />
+    <string id="titles_encyclopedia_title_format" text="{TITLE} {LOCATION}" />
+    <string id="titles_tooltip_title_format" text="{TITLE} {LOCATION}" />
+    <string id="titles_location_formal_prefix" text="{LOCATION}" />
+    <string id="titles_tooltip_liege" text="Сюзерен" />
+    <string id="titles_tooltip_leader" text="Лидер" />
+    <string id="titles_tooltip_hired_by" text="Нанят" />
+    <string id="titles_tooltip_none" text="Нет" />
+    <string id="titles_list_separator" text=", " />
+    <string id="titles_list_final_separator" text=" и " />
+    <string id="titles_notif_gained_with_location" text="Вы получили титул {TITLE} {LOCATION}!" />
+    <string id="titles_notif_gained" text="Вы получили титул {TITLE}!" />
+    <string id="titles_notif_lost" text="Вы потеряли титул {TITLE}." />
+    <string id="titles_notif_changed_with_location" text="Ваш титул изменился на {TITLE} {LOCATION}." />
+    <string id="titles_notif_changed" text="Ваш титул изменился на {TITLE}." />
+    <string id="titles_notif_npc_gained_with_location" text="{HERO} получил титул {TITLE} {LOCATION}." />
+    <string id="titles_notif_npc_gained" text="{HERO} получил титул {TITLE}." />
+    <string id="titles_notif_npc_lost" text="{HERO} потерял титул {TITLE}." />
+    <string id="titles_notif_npc_changed_with_location" text="Титул {HERO} изменился на {TITLE} {LOCATION}." />
+    <string id="titles_notif_npc_changed" text="Титул {HERO} изменился на {TITLE}." />
+    <string id="titles_log_gained" text="{HERO} получил титул {TITLE}" />
+    <string id="titles_log_lost" text="{HERO} потерял свой титул" />
+    <string id="titles_log_lost_specific" text="{HERO} потерял титул {OLD_TITLE}" />
+  </strings>
+</base>

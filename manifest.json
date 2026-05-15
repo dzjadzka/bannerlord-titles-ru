@@ -1,0 +1,23 @@
+{
+  "original_module_id": "Titles",
+  "original_display_name": "Titles",
+  "original_version": "v1.0.2",
+  "localization_module_id": "TitlesRU",
+  "localization_display_name": "Titles RU Localization",
+  "ru_version": "v1.0.2-ru1",
+  "language": "ru",
+  "source": "partial_stale_pack_plus_manual",
+  "source_pack": "Titles RU V1.0.2",
+  "validation": {
+    "installed_strings": 115,
+    "ru_strings": 115,
+    "missing_ids": 0,
+    "extra_ids": 0,
+    "placeholder_mismatches": 0,
+    "xml_errors": 0
+  },
+  "artifacts": {
+    "standalone_zip": "TitlesRU-v1.0.2-ru1.zip",
+    "patch_zip": "Titles-RU-patch-v1.0.2-ru1.zip"
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module>
+  <Name value="Titles RU Localization" />
+  <Id value="TitlesRU" />
+  <Version value="v1.0.2-ru1" />
+  <Official value="false" />
+  <SingleplayerModule value="true" />
+  <MultiplayerModule value="false" />
+  <DependedModules>
+    <DependedModule Id="Native" />
+    <DependedModule Id="SandBoxCore" />
+    <DependedModule Id="Sandbox" />
+    <DependedModule Id="CustomBattle" />
+    <DependedModule Id="StoryMode" Optional="true" />
+    <DependedModule Id="Titles" />
+  </DependedModules>
+</Module>

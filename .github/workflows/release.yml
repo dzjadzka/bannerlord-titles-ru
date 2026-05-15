@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build standalone archive
+        shell: pwsh
+        run: |
+          Compress-Archive -Path "Modules" -DestinationPath "TitlesRU-v1.0.2-ru1.zip" -Force
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            TitlesRU-v1.0.2-ru1.zip
+            validation_report.md
+            manifest.json
+          body_path: CHANGELOG.md
