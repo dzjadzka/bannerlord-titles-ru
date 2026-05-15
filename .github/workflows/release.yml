@@ -6,22 +6,38 @@ on:
     tags:
       - "v*"
 
+permissions:
+  contents: write
+
+env:
+  VERSION: v1.0.2-ru1
+  STANDALONE_ZIP: TitlesRU-v1.0.2-ru1.zip
+  PATCH_ZIP: Titles-RU-patch-v1.0.2-ru1.zip
+
 jobs:
   release:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build standalone archive
+      - name: Build release archives
         shell: pwsh
         run: |
-          Compress-Archive -Path "Modules" -DestinationPath "TitlesRU-v1.0.2-ru1.zip" -Force
+          Compress-Archive -Path "Modules" -DestinationPath $env:STANDALONE_ZIP -Force
+
+          New-Item -ItemType Directory -Path "tmp/patch/Modules/Titles/ModuleData/Languages/RU" -Force | Out-Null
+          Copy-Item -Path "Modules/TitlesRU/ModuleData/Languages/RU/language_data.xml" -Destination "tmp/patch/Modules/Titles/ModuleData/Languages/RU/language_data.xml" -Force
+          Copy-Item -Path "Modules/TitlesRU/ModuleData/Languages/RU/std_module_strings_xml.xml" -Destination "tmp/patch/Modules/Titles/ModuleData/Languages/RU/std_module_strings_xml.xml" -Force
+          Compress-Archive -Path "tmp/patch/Modules" -DestinationPath $env:PATCH_ZIP -Force
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ env.VERSION }}
+          name: Titles RU ${{ env.VERSION }}
           files: |
-            TitlesRU-v1.0.2-ru1.zip
+            ${{ env.STANDALONE_ZIP }}
+            ${{ env.PATCH_ZIP }}
             validation_report.md
             manifest.json
           body_path: CHANGELOG.md

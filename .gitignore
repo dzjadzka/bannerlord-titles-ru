@@ -4,3 +4,5 @@
 *.token
 *.cookie
 tmp/
+artifacts/
+*.zip
