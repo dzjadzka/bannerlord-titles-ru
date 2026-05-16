@@ -13,13 +13,13 @@ https://github.com/dzjadzka/bannerlord-titles-ru/settings/secrets/actions
 Add these repository secrets:
 
 ```text
-NEXUSMODS_API_KEY
-NEXUSMODS_FILE_GROUP_ID
+API_KEY
+FILE_GROUP_ID
 ```
 
-`NEXUSMODS_API_KEY` is your new Nexus Mods API key.
+`API_KEY` is your new Nexus Mods API key.
 
-`NEXUSMODS_FILE_GROUP_ID` is available only after the Nexus page has at least one uploaded file.
+`FILE_GROUP_ID` is available only after the Nexus page has at least one uploaded file.
 
 ## 2. Where to find file_group_id
 
@@ -34,7 +34,7 @@ NEXUSMODS_FILE_GROUP_ID
 3. Go to the public-facing `Files` tab or `Manage Files`.
 4. Open `API Info` for the uploaded file or file group.
 5. Copy the `file_group_id` value.
-6. Add it to GitHub Actions secrets as `NEXUSMODS_FILE_GROUP_ID`.
+6. Add it to GitHub Actions secrets as `FILE_GROUP_ID`.
 
 ## 3. Enable automatic upload
 

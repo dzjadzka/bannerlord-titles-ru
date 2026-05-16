@@ -56,15 +56,15 @@ jobs:
         if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.upload_to_nexus == 'true' }}
         shell: pwsh
         run: |
-          if (-not "${{ secrets.NEXUSMODS_API_KEY }}") { throw "Missing GitHub secret: NEXUSMODS_API_KEY" }
-          if (-not "${{ secrets.NEXUSMODS_FILE_GROUP_ID }}") { throw "Missing GitHub secret: NEXUSMODS_FILE_GROUP_ID" }
+          if (-not "${{ secrets.API_KEY }}") { throw "Missing GitHub secret: API_KEY" }
+          if (-not "${{ secrets.FILE_GROUP_ID }}") { throw "Missing GitHub secret: FILE_GROUP_ID" }
 
       - name: Upload standalone archive to Nexus Mods
         if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.upload_to_nexus == 'true' }}
         uses: Nexus-Mods/upload-action@main
         with:
-          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
-          file_group_id: ${{ secrets.NEXUSMODS_FILE_GROUP_ID }}
+          api_key: ${{ secrets.API_KEY }}
+          file_group_id: ${{ secrets.FILE_GROUP_ID }}
           filename: ${{ env.STANDALONE_ZIP }}
           version: ${{ env.VERSION }}
           display_name: Titles RU Localization ${{ env.VERSION }}
