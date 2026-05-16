@@ -1,0 +1,14 @@
+{
+  "game_domain": "mountandblade2bannerlord",
+  "mod_id": 11224,
+  "file_group_id": null,
+  "display_name": "Titles RU Localization",
+  "file_category": "main",
+  "recommended_file": "TitlesRU-v1.0.2-ru1.zip",
+  "nexus_page_url": "https://www.nexusmods.com/mountandblade2bannerlord/mods/11224",
+  "auto_upload": {
+    "enabled": false,
+    "requires_secret": "NEXUSMODS_API_KEY",
+    "requires_file_group_secret": "NEXUSMODS_FILE_GROUP_ID"
+  }
+}

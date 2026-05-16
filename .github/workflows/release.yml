@@ -2,6 +2,15 @@ name: Release
 
 on:
   workflow_dispatch:
+    inputs:
+      upload_to_nexus:
+        description: "Upload standalone archive to Nexus Mods"
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
   push:
     tags:
       - "v*"
@@ -40,4 +49,27 @@ jobs:
             ${{ env.PATCH_ZIP }}
             validation_report.md
             manifest.json
+            nexus.json
           body_path: CHANGELOG.md
+
+      - name: Verify Nexus upload configuration
+        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.upload_to_nexus == 'true' }}
+        shell: pwsh
+        run: |
+          if (-not "${{ secrets.NEXUSMODS_API_KEY }}") { throw "Missing GitHub secret: NEXUSMODS_API_KEY" }
+          if (-not "${{ secrets.NEXUSMODS_FILE_GROUP_ID }}") { throw "Missing GitHub secret: NEXUSMODS_FILE_GROUP_ID" }
+
+      - name: Upload standalone archive to Nexus Mods
+        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.upload_to_nexus == 'true' }}
+        uses: Nexus-Mods/upload-action@main
+        with:
+          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
+          file_group_id: ${{ secrets.NEXUSMODS_FILE_GROUP_ID }}
+          filename: ${{ env.STANDALONE_ZIP }}
+          version: ${{ env.VERSION }}
+          display_name: Titles RU Localization ${{ env.VERSION }}
+          description: Russian localization for Titles v1.0.2
+          file_category: main
+          archive_existing_file: true
+          primary_mod_manager_download: true
+          allow_mod_manager_download: true
