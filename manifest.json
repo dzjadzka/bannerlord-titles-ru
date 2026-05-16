@@ -6,8 +6,6 @@
   "localization_display_name": "Titles RU Localization",
   "ru_version": "v1.0.2-ru1",
   "language": "ru",
-  "source": "partial_stale_pack_plus_manual",
-  "source_pack": "Titles RU V1.0.2",
   "validation": {
     "installed_strings": 115,
     "ru_strings": 115,
@@ -17,14 +15,13 @@
     "xml_errors": 0
   },
   "artifacts": {
-    "standalone_zip": "TitlesRU-v1.0.2-ru1.zip",
-    "patch_zip": "Titles-RU-patch-v1.0.2-ru1.zip"
+    "release_zip": "TitlesRU-v1.0.2-ru1.zip"
   },
   "nexus": {
     "game_domain": "mountandblade2bannerlord",
     "mod_id": 11224,
     "url": "https://www.nexusmods.com/mountandblade2bannerlord/mods/11224",
     "file_group_id": null,
-    "auto_upload_enabled": false
+    "auto_upload_enabled": true
   }
 }

@@ -21,7 +21,6 @@ permissions:
 env:
   VERSION: v1.0.2-ru1
   STANDALONE_ZIP: TitlesRU-v1.0.2-ru1.zip
-  PATCH_ZIP: Titles-RU-patch-v1.0.2-ru1.zip
 
 jobs:
   release:
@@ -34,11 +33,6 @@ jobs:
         run: |
           Compress-Archive -Path "Modules" -DestinationPath $env:STANDALONE_ZIP -Force
 
-          New-Item -ItemType Directory -Path "tmp/patch/Modules/Titles/ModuleData/Languages/RU" -Force | Out-Null
-          Copy-Item -Path "Modules/TitlesRU/ModuleData/Languages/RU/language_data.xml" -Destination "tmp/patch/Modules/Titles/ModuleData/Languages/RU/language_data.xml" -Force
-          Copy-Item -Path "Modules/TitlesRU/ModuleData/Languages/RU/std_module_strings_xml.xml" -Destination "tmp/patch/Modules/Titles/ModuleData/Languages/RU/std_module_strings_xml.xml" -Force
-          Compress-Archive -Path "tmp/patch/Modules" -DestinationPath $env:PATCH_ZIP -Force
-
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
@@ -46,10 +40,6 @@ jobs:
           name: Titles RU ${{ env.VERSION }}
           files: |
             ${{ env.STANDALONE_ZIP }}
-            ${{ env.PATCH_ZIP }}
-            validation_report.md
-            manifest.json
-            nexus.json
           body_path: CHANGELOG.md
 
       - name: Verify Nexus upload configuration
